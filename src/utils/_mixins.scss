@@ -1,0 +1,19 @@
+@mixin logo-d() {
+    width: 210.32px;
+    height: 68px;
+}
+
+@mixin logo-m() {
+    width: 145px;
+    height: 46.88px;
+}
+
+@mixin typography-d() {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+@mixin typography-m() {
+    font-weight: 500;
+    font-size: 12px;
+}
