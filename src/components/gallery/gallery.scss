@@ -1,0 +1,8 @@
+@import "../../main.scss";
+
+.gallery {
+    @include gallery-d;
+    @media screen and (max-width: $breakpoint) {
+        @include gallery-m;
+      }
+}
