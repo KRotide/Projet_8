@@ -30,6 +30,11 @@
     border-radius: 10px;
 }
 
+@mixin bannerAbout-img-and-overlay-m() {
+    height: 223px;
+    border-radius: 10px;
+}
+
 @mixin banner-img-overlay-d() {
     z-index: 1;
     position: absolute;

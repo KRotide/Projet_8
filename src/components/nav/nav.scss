@@ -1,20 +1,24 @@
 @import "../../main.scss";
 
 .nav {
-    display: flex;
-    gap: 57px;
+  display: flex;
+  gap: 57px;
+
+  @media screen and (max-width: $breakpoint) {
+    gap: 26px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-secondary;
+    @include typography-d;
+
     @media screen and (max-width: $breakpoint) {
-        gap: 26px;
-      }
-    &__link {
-        text-decoration: none;
-        color: $color-secondary;
-        @include typography-d;
-        @media screen and (max-width: $breakpoint) {
-            @include typography-m;
-          }
-        &.active {
-            text-decoration: underline;
-        }
+      @include typography-m;
     }
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
 }

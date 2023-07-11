@@ -5,8 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     &__logo-d {
         @include logo-d;
+
         @media screen and (max-width: $breakpoint) {
             @include logo-m;
         }

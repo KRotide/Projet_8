@@ -6,9 +6,11 @@
     background-color: $color-tertiary;
     width: 100vw;
     height: 209px;
+
     @media screen and (max-width: $breakpoint) {
         left: -20px;
-      }
+    }
+
     &__logo {
         width: 122px;
         height: 39.44px;
@@ -16,17 +18,19 @@
         display: flex;
         margin: auto;
     }
+
     &__txt {
         @include typography-d;
         color: $color-primary;
         display: flex;
         justify-content: center;
         padding-top: 46px;
+
         @media screen and (max-width: $breakpoint) {
             @include typography-m;
             padding-top: 10px;
             width: 97px;
             margin: auto;
-          }
+        }
     }
 }
