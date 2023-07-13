@@ -1,3 +1,4 @@
+/* Général */
 @mixin logo-d() {
     width: 210.32px;
     height: 68px;
@@ -18,6 +19,17 @@
     font-size: 12px;
 }
 
+@mixin dropdown-typography-d() {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+@mixin dropdown-typography-m() {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+/* Banner */
 @mixin banner-img-d() {
     width: 100%;
     height: 223px;
@@ -66,6 +78,7 @@
     font-size: 24px;
 }
 
+/* Gallery */
 @mixin gallery-d {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -85,6 +98,7 @@
     gap: 20px;
 }
 
+/* Gallery__Card */
 @mixin card-d {
     position: relative;
     width: 100%;
@@ -114,4 +128,88 @@
     color: white;
     font-weight: 500;
     font-size: 18px;
+}
+
+/* Footer */
+@mixin footer-d {
+    position: relative;
+    left: -100px;
+    background-color: $color-tertiary;
+    width: 100vw;
+    height: 209px;
+}
+
+@mixin footer-logo {
+    width: 122px;
+    height: 39.44px;
+    padding-top: 66px;
+    display: flex;
+    margin: auto;
+}
+
+/* About */
+@mixin collapse-d {
+    margin-top: 38px;
+    margin-bottom: 38px;
+    padding-left: 108.5px;
+    padding-right: 108.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@mixin collapse-m {
+    margin-top: 19px;
+    margin-bottom: 19px;
+    padding-left: 0px;
+    padding-right: 0px;
+    gap: 20px;
+}
+
+@mixin collapse-dropdown-d {
+    width: 100%;
+    height: 52px;
+    box-sizing: border-box;
+    padding: 11.5px 24px 11.5px 15px;
+    border-radius: 5px;
+    background-color: $color-secondary;
+}
+
+@mixin collapse-dropdown-m {
+    height: 30px;
+    padding: 7px 12px 7px 10px;
+}
+
+@mixin collapse-dropdown-title-d {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include typography-d;
+    color: $color-primary;
+}
+
+@mixin collapse-dropdown-title-m {
+    font-size: 13px;
+}
+
+@mixin collapse-dropdown-arrow-d {
+    cursor: pointer;
+    width: 24px;
+    height: 13.71px;
+}
+
+@mixin collapse-dropdown-arrow-m {
+    width: 16px;
+    height: 9.14px;
+}
+
+@mixin collapse-dropdown-txt-d {
+    padding: 25px 20px 20px 20px;
+    @include dropdown-typography-d;
+    color: $color-secondary;
+}
+
+@mixin collapse-dropdown-txt-m {
+    padding: 13px 20px 19px 20px;
+    @include dropdown-typography-m;
 }

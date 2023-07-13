@@ -1,28 +1,55 @@
 @import "../../main.scss";
 
 .collapse {
-    margin-top: 38px;
-    margin-bottom: 38px;
-    padding-left: 108.5px;
-    padding-right: 108.5px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    @include collapse-d;
+
+    @media screen and (max-width: $breakpoint) {
+        @include collapse-m;
+    }
 
     &__dropdown {
-        width: 100%;
-        height: 52px;
-        box-sizing: border-box;
-        padding: 10px 20px 10px 15px;
-        border-radius: 5px;
-        background-color: $color-secondary;
+        @include collapse-dropdown-d;
+
+        @media screen and (max-width: $breakpoint) {
+            @include collapse-dropdown-m;
+        }
+
+        &--open {
+            margin-bottom: 150px;
+        }
 
         &__title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            @include typography-d;
-            color: $color-primary;
+            @include collapse-dropdown-title-d;
+
+            @media screen and (max-width: $breakpoint) {
+                @include collapse-dropdown-title-m;
+            }
+        }
+
+        &__arrow {
+            @include collapse-dropdown-arrow-d;
+            transition: all 0.3s ease-in-out;
+
+            @media screen and (max-width: $breakpoint) {
+                @include collapse-dropdown-arrow-m;
+            }
+
+            &--up {
+                transform: rotate(0deg);
+            }
+
+            &--down {
+                transform: rotate(-180deg);
+            }
+        }
+
+        &__txt {
+            @include collapse-dropdown-txt-d;
+            transition: margin-bottom 0.3s ease-in-out;
+
+            @media screen and (max-width: $breakpoint) {
+                @include collapse-dropdown-txt-m;
+            }
         }
     }
 }
