@@ -213,3 +213,22 @@
     padding: 13px 20px 19px 20px;
     @include dropdown-typography-m;
 }
+
+/* PageNotFound */
+
+@mixin pageNotFound-content-d {
+    margin-top: 139px;
+    margin-bottom: 139px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 139px;
+    color: $color-secondary;
+}
+
+@mixin pageNotFound-content-m {
+    margin-top: 113px;
+    margin-bottom: 113px;
+    gap: 113px;
+}
