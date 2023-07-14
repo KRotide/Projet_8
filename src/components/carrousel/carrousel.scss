@@ -1,0 +1,49 @@
+@import "../../main.scss";
+
+.carrousel {
+    @include carrousel-d;
+
+    @media screen and (max-width: $breakpoint) {
+        @include carrousel-m;
+    }
+
+    &__img {
+        @include carrousel-img-d;
+    }
+
+    &__icon {
+        @include carrousel-icon-d;
+
+        @media screen and (max-width: $breakpoint) {
+            @include carrousel-icon-m;
+        }
+
+        &__prev {
+            left: 23.36px;
+
+            @media screen and (max-width: $breakpoint) {
+                left: 5.84px;
+            }
+        }
+
+        &__next {
+            right: 23.36px;
+
+            @media screen and (max-width: $breakpoint) {
+                right: 5.84px;
+            }
+        }
+
+        &--hidden {
+            opacity: 0;
+        }
+    }
+
+    &__slideNumbering {
+        @include carrousel-slideNumbering-d;
+
+        @media screen and (max-width: $breakpoint) {
+            opacity: 0;
+        }
+    }
+}

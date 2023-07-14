@@ -215,7 +215,6 @@
 }
 
 /* PageNotFound */
-
 @mixin pageNotFound-content-d {
     margin-top: 139px;
     margin-bottom: 139px;
@@ -231,4 +230,52 @@
     margin-top: 113px;
     margin-bottom: 113px;
     gap: 113px;
+}
+
+/* Accomodation */
+
+/* Accomodation__Carrousel */
+@mixin carrousel-d {
+    position: relative;
+    width: 100%;
+    height: 415px;
+    margin-top: 50px;
+}
+
+@mixin carrousel-m {
+    height: 255px;
+    margin-top: 27px;
+}
+
+@mixin carrousel-img-d {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin carrousel-icon-d {
+    position: absolute;
+    width: 46.68px;
+    height: 79.2px;
+    top: 167.9px;
+    opacity: 87%;
+    cursor: pointer;
+}
+
+@mixin carrousel-icon-m {
+    width: 11.67px;
+    height: 19.8px;
+    top: 117.6px;
+}
+
+@mixin carrousel-slideNumbering-d {
+    color: $color-primary;
+    font-weight: 500;
+    font-size: 18px;
+    position: absolute;
+    width: 24px;
+    height: 32.4px;
+    left: 50%;
+    right: 50%;
+    bottom: 24.92px;
 }

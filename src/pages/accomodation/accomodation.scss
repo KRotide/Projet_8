@@ -1,2 +1,97 @@
 @import "../../main.scss";
 
+.accomodation__main {
+    position: relative;
+
+    &__title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        color: $color-secondary;
+        font-weight: 500;
+
+        @media screen and (max-width: $breakpoint) {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        & h1 {
+            font-size: 36px;
+            line-height: 51.34px;
+
+            @media screen and (max-width: $breakpoint) {
+                font-size: 18px;
+                line-height: 25.67px;
+            }
+        }
+
+        & p {
+            font-size: 18px;
+            line-height: 25.67px;
+
+            @media screen and (max-width: $breakpoint) {
+                font-size: 14px;
+                line-height: 19.96px;
+            }
+        }
+    }
+
+    &__host {
+        position: absolute;
+        top: 439px;
+        right: 0px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @media screen and (max-width: $breakpoint) {
+            top: 387px;
+            gap: 10.5px;
+        }
+
+        & p {
+            color: $color-secondary;
+            font-weight: 500;
+            font-size: 18px;
+            text-align: end;
+
+            @media screen and (max-width: $breakpoint) {
+                font-size: 12px;
+            }
+        }
+
+        &__img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+
+            @media screen and (max-width: $breakpoint) {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+
+    &__rating {
+        position: absolute;
+        top: 524px;
+        right: 0px;
+        display: flex;
+        gap: 12px;
+
+        @media screen and (max-width: $breakpoint) {
+            top: 395px;
+            left: 0px;
+            gap: 6px;
+        }
+
+        & img {
+            width: 24.75px;
+            height: 24px;
+
+            @media screen and (max-width: $breakpoint) {
+                width: 13.41px;
+                height: 13px;
+            }
+        }
+    }
+}
