@@ -1,5 +1,4 @@
 import "./about.scss";
-import "../../components/collapse/collapse.scss"
 import Header from "../../components/header/header";
 import Banner from "../../components/banner/banner";
 import DatasAbout from "../../datas/about.json";
@@ -11,14 +10,16 @@ export default function About() {
         <div className="about">
             <Header />
             <Banner />
-            {DatasAbout.map((data) => (
-                <Collapse
-                    key={data.id}
-                    id={data.id}
-                    title={data.aboutTitle}
-                    content={data.aboutText}
-                />
-            ))}
+            <main className="about__main">
+                {DatasAbout.map(data => (
+                    <Collapse
+                        key={data.id}
+                        id={data.id}
+                        title={data.aboutTitle}
+                        content={data.aboutText}
+                    />
+                ))}
+            </main>
             <Footer />
         </div>
     )

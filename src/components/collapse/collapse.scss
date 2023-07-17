@@ -7,15 +7,19 @@
         @include collapse-m;
     }
 
+    &__open {
+        animation: marginBottomOpen 0.3s ease-in-out;
+    }
+
+    &__closed {
+        animation: marginBottomClosed 0.3s ease-in-out;
+    }
+
     &__dropdown {
         @include collapse-dropdown-d;
 
         @media screen and (max-width: $breakpoint) {
             @include collapse-dropdown-m;
-        }
-
-        &--open {
-            margin-bottom: 150px;
         }
 
         &__title {
@@ -44,12 +48,64 @@
         }
 
         &__txt {
-            @include collapse-dropdown-txt-d;
-            transition: margin-bottom 0.3s ease-in-out;
+            &--visible {
+                @include collapse-dropdown-txt-d;
+                animation: slideDown 0.3s ease-in-out;
 
-            @media screen and (max-width: $breakpoint) {
-                @include collapse-dropdown-txt-m;
+                @media screen and (max-width: $breakpoint) {
+                    @include collapse-dropdown-txt-m;
+                }
+            }
+
+            &--hidden {
+                @include collapse-dropdown-txt-d;
+                animation: slideUp 0.3s ease-in-out;
+                opacity: 0;
+
+                @media screen and (max-width: $breakpoint) {
+                    @include collapse-dropdown-txt-m;
+                }
             }
         }
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes marginBottomOpen {
+    0% {
+        margin-bottom: 0px;
+    }
+    100% {
+        margin-bottom: contentHeight;
+    }
+}
+
+@keyframes marginBottomClosed {
+    0% {
+        margin-bottom: contentHeight;
+    }
+    100% {
+        margin-bottom: 0px;
     }
 }

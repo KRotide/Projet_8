@@ -1,1 +1,11 @@
 @import "../../main.scss";
+
+.about{
+    &__main {
+        @include about-main-d;
+
+        @media screen and (max-width: $breakpoint) {
+            @include about-main-m;
+        }
+    }
+}

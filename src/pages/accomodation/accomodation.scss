@@ -1,17 +1,13 @@
 @import "../../main.scss";
 
 .accomodation__main {
-    position: relative;
+    @include accomodation-main-d;
 
     &__title {
-        margin-top: 30px;
-        margin-bottom: 20px;
-        color: $color-secondary;
-        font-weight: 500;
+        @include accomodation-main-title-d;
 
         @media screen and (max-width: $breakpoint) {
-            margin-top: 15px;
-            margin-bottom: 10px;
+            @include accomodation-main-title-m;
         }
 
         & h1 {
@@ -21,6 +17,7 @@
             @media screen and (max-width: $breakpoint) {
                 font-size: 18px;
                 line-height: 25.67px;
+                margin-bottom: 5px;
             }
         }
 
@@ -35,27 +32,29 @@
         }
     }
 
+    &__hostAndRating {
+        @media screen and (max-width: $breakpoint) {
+            @include accomodation-main-hostAndRating-m;
+        }
+    }
+
     &__host {
-        position: absolute;
-        top: 439px;
-        right: 0px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        @include accomodation-main-host-d;
 
         @media screen and (max-width: $breakpoint) {
-            top: 387px;
-            gap: 10.5px;
+            position: unset;
         }
 
         & p {
             color: $color-secondary;
             font-weight: 500;
             font-size: 18px;
+            line-height: 25.67px;
             text-align: end;
 
             @media screen and (max-width: $breakpoint) {
                 font-size: 12px;
+                line-height: 17.11px;
             }
         }
 
@@ -72,15 +71,10 @@
     }
 
     &__rating {
-        position: absolute;
-        top: 524px;
-        right: 0px;
-        display: flex;
-        gap: 12px;
+        @include accomodation-main-rating-d;
 
         @media screen and (max-width: $breakpoint) {
-            top: 395px;
-            left: 0px;
+            position: unset;
             gap: 6px;
         }
 
@@ -92,6 +86,50 @@
                 width: 13.41px;
                 height: 13px;
             }
+        }
+    }
+
+    &__tags {
+        @include accomodation-main-tags-d;
+
+        @media screen and (max-width: $breakpoint) {
+            margin-bottom: 0px;
+            order: 2;
+        }
+
+        & span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $color-primary;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19.96px;
+            height: 25px;
+            padding: 0px 10px;
+            border-radius: 10px;
+            background-color: $color-secondary;
+
+            @media screen and (max-width: $breakpoint) {
+                font-size: 10px;
+                line-height: 14.26px;
+                height: 18px;
+                padding: 0px 5px;
+            }
+        }
+    }
+
+    &__collapse {
+        @include accomodation-main-collapse-d;
+
+        @media screen and (max-width: $breakpoint) {
+            margin-bottom: 27px;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__details {
+            width: 100%;
         }
     }
 }
